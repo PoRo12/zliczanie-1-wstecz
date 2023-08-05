@@ -1,0 +1,29 @@
+
+
+function zliczanie1wstecz(tablica, danaLiczba) {
+  let iloscWystapien = new Array(43).fill(0);
+
+  for (let i = 1; i < tablica.length; i++) {
+
+      if (tablica[i].find((szukane) => szukane === danaLiczba)){
+       
+	   for (let j = 1; j<43; j++){
+		
+			if(tablica[i - 1][j] === j){
+				iloscWystapien[j] += 1
+			}
+		
+	}
+    }
+  }
+	return iloscWystapien
+}
+
+const tablica = [
+  [1, 2, 3, 4, 5],
+  [3, 4, 6, 7, 8],
+  [1, 4, 7, 10, 15],
+];
+const danaLiczba = 3;
+zliczanie1wstecz(tablica, danaLiczba)
+console.log(iloscWystapien)
